@@ -2,64 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fresh Fade Barbershop</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f4f4f4;
+      color: #111;
     }
 
     header {
       background: #111;
       color: white;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
-      font-size: 24px;
-      letter-spacing: 1px;
+      font-size: 20px;
     }
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 120px 20px;
       text-align: center;
+      padding: 100px 20px;
     }
 
-    .hero h2 {
-      font-size: 40px;
+    .hero h1 {
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     .btn {
+      display: inline-block;
+      padding: 12px 20px;
       background: white;
       color: black;
-      padding: 12px 25px;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #ddd;
+      margin-top: 15px;
+      border-radius: 5px;
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
-      max-width: 800px;
-      margin: auto;
     }
 
-    .section h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -67,10 +73,18 @@
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -78,25 +92,28 @@
 </header>
 
 <div class="hero">
-  <h2>Premium Grooming Experience</h2>
-  <p>Sharp cuts. Clean fades. Every time.</p>
-  <a href="#" class="btn">Book Appointment</a>
+  <h1>Premium Cuts. Clean Style.</h1>
+  <p>Book your appointment today.</p>
+  <a href="#" class="btn">Book Now</a>
 </div>
 
 <div class="section">
   <h2>Services</h2>
-  <p>Haircuts • Beard Trims • Lineups • Hot Towel Shaves</p>
+  <div class="cards">
+    <div class="card">Haircut</div>
+    <div class="card">Beard Trim</div>
+    <div class="card">Lineup</div>
+  </div>
 </div>
 
 <div class="section">
-  <h2>About Us</h2>
-  <p>At Fresh Fade, we focus on precision, style, and a clean atmosphere so you leave looking your best.</p>
+  <h2>About</h2>
+  <p>We provide sharp, clean cuts in a modern, comfortable environment.</p>
 </div>
 
 <div class="section">
   <h2>Contact</h2>
-  <p>Call: (123) 456-7890</p>
-  <p>123 Main Street</p>
+  <p>Call or text: (123) 456-7890</p>
 </div>
 
 <footer>
